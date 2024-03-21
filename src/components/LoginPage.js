@@ -67,7 +67,7 @@ const LoginPage = () => {
 
   return (
     <div className='relative'>
-        <form onSubmit={(e)=>e.preventDefault()} className='w-1/4 bg-black rounded-lg mx-auto p-5 bg-opacity-80'>
+        <form onSubmit={(e)=>e.preventDefault()} className='w-1/4 bg-black absolute left-[550px] top-44 rounded-lg mx-auto p-5 bg-opacity-80'>
             <h1 className='text-white p-3 mb-3 text-4xl'>{isSignInForm ? "SignIn" : "SignUp"}</h1>
             {
                 !isSignInForm && 

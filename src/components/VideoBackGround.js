@@ -12,7 +12,7 @@ const VideoBackGround = ({movieId}) => {
     const filterdData = jsonData.results.filter((video)=>video.type === "Trailer")
     const movieTrailer = filterdData ? filterdData[0] : jsonData.results[0]
     setTrailerKey(movieTrailer.key)
-    console.log(movieTrailer)
+    // console.log(movieTrailer)
 
   }
 
@@ -35,4 +35,4 @@ const VideoBackGround = ({movieId}) => {
   )
 }
 
-export default VideoBackGround
+export default VideoBackGround;

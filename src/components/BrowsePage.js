@@ -17,4 +17,4 @@ const BrowsePage = () => {
   )
 }
 
-export default BrowsePage
+export default BrowsePage;
