@@ -29,12 +29,12 @@ const Body = () => {
   },[])
 
   return (
-    <div>
-        <img src={backgroundImage} alt="backgroundIMage" className='absolute -z-10' />
+    <div className='w-screen'>
+        <img src={backgroundImage} alt="backgroundIMage" className='absolute -z-10 w-full h-full' />
         <Header/>
         <LoginPage/>
     </div>
   )
 }
 
-export default Body
+export default Body;

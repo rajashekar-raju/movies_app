@@ -3,13 +3,11 @@ import MovieCard from './MovieCard'
 
 const MovieList = ({title,movies}) => {
   return (
-    <div>
-        <h1>{title}</h1>
-        
-            {
-                movies.map((movie) => <MovieCard key={movie.id} poster={movie.poster_path}/>)
-            }
-        
+    <div className=''>
+        <h1 className='text-white text-sm ml-3 p-2 '>{title}</h1>
+          <div className='flex gap-3 overflow-x-auto ml-6'>
+              {movies.map(movie => <MovieCard key={movie.id} poster={movie.poster_path}/>)}
+          </div>
     </div>
   )
 }

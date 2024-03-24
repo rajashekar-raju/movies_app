@@ -67,7 +67,15 @@ const LoginPage = () => {
 
   return (
     <div className='relative'>
-        <form onSubmit={(e)=>e.preventDefault()} className='w-1/4 bg-black absolute left-[550px] top-44 rounded-lg mx-auto p-5 bg-opacity-80'>
+        <form 
+            onSubmit={(e)=>e.preventDefault()} 
+            className='w-2/4 bg-black absolute left-40 top-20 rounded-lg mx-auto p-2 bg-opacity-80
+                md:left-52 pl-5
+                lg:w-1/3 lg:left-80
+                xl:left-[420px]
+                2xl:left-[550px] 2xl:top-40 pt-5 2xl:w-1/4
+            '
+            >
             <h1 className='text-white p-3 mb-3 text-4xl'>{isSignInForm ? "SignIn" : "SignUp"}</h1>
             {
                 !isSignInForm && 
@@ -105,11 +113,11 @@ const LoginPage = () => {
                 <button onClick={handleValidation} className='w-[96%] bg-red-700 rounded-lg outline-none py-2 px-4'>submit</button>
             </div>
             <div>
-                <p onClick={toggleSignInForm} className='text-white p-3 mb-3 cursor-pointer mt-3'>{isSignInForm ? "new to movies app SignUp now" : "already a user signin now"}</p>
+                <p onClick={toggleSignInForm} className='text-white cursor-pointer mt-3 md:p-2 2xl:mb-3'>{isSignInForm ? "new to movies app SignUp now" : "already a user signin now"}</p>
             </div>
         </form>
     </div>
   )
 }
 
-export default LoginPage
+export default LoginPage;
