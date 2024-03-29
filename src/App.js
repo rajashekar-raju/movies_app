@@ -5,6 +5,7 @@ import BrowsePage from "./components/BrowsePage";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import ChatGptPage from "./components/ChatGptPage";
+import MovieDetailsPage from "./components/MovieDetailsPage";
 
 function App() {
 
@@ -20,6 +21,10 @@ function App() {
     {
       path:"/chatGpt",
       element:<ChatGptPage/>
+    },
+    {
+      path:"/movieDetails/:movieId",
+      element:<MovieDetailsPage/>
     }
   ])
 

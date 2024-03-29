@@ -24,4 +24,4 @@ const VideoTitle = ({title,overview}) => {
   )
 }
 
-export default VideoTitle
+export default VideoTitle 
