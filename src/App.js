@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import BrowsePage from "./components/BrowsePage";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import ChatGptPage from "./components/ChatGptPage";
 
 function App() {
 
@@ -15,6 +16,10 @@ function App() {
     {
       path:"/browse",
       element:<BrowsePage/>
+    },
+    {
+      path:"/chatGpt",
+      element:<ChatGptPage/>
     }
   ])
 

@@ -1,9 +1,14 @@
+const tmdbKey = process.env.REACT_APP_TMDB_KEY
+console.log(tmdbKey);
+
 export const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNzgwN2U4NzA4ZjBhZWMxNmM0Y2NkMWU1M2Q1M2ZjZiIsInN1YiI6IjY1N2QxZDg1NjBjNzUxMDcwMTc3MmMxYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.V46NJgJp5mMJn5ZHtZM3e7LZvQwcw4cZ_9cwT-ZjW68'
+      Authorization: 'Bearer ' + tmdbKey
     }
   };
 
   export const IMG_URL = "https://image.tmdb.org/t/p/w500";
+
+  // export const GPT_API = process.env.REACT_APP_GPT_KEY

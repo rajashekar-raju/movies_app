@@ -13,6 +13,7 @@ const Body = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  console.log(process.env.REACT_APP_GPT_KEY)
   useEffect(()=> {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
