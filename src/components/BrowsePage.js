@@ -5,7 +5,7 @@ import SecondaryContainer from './SecondaryContainer'
 import usePopularMovies from './customHooks/usePopularMovies'
 import useTopRatedMovies from './customHooks/useTopRatedMovies'
 import useUpComingMovies from './customHooks/useUpComingMovies'
-
+ 
 const BrowsePage = () => {
 
   useNowPlayingMovies()

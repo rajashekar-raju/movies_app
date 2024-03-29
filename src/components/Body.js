@@ -15,7 +15,7 @@ const Body = () => {
 
   useEffect(()=> {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
+      if (user) { 
         const {uid,email,displayName} = user;
         dispatch(addUser({uid:uid,email:email,displayName:displayName}));
         navigate("/browse");

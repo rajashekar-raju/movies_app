@@ -5,4 +5,4 @@ export const checkValidation = (email,password) => {
     if(!validatedEmail) return "Invalid Email"
     if(!validatedPassword) return "Invalid Password"
     return null
-}
+} 

@@ -63,7 +63,7 @@ const LoginPage = () => {
                 setErrorMessage(errorCode + "-" + errorMessage)
             });
         }
-    }
+    } 
 
   return (
     <div className='relative'>
