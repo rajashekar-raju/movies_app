@@ -41,7 +41,7 @@ const ChatGptSearchBar = () => {
     }
 
   return (
-    <div className='pt-16'>
+    <div className='pt-28'>
         <form onSubmit={(e)=>e.preventDefault()} className='w-1/2 flex  bg-black p-3 mx-auto rounded-xl'>
             <input 
                 type="text" 

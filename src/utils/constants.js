@@ -1,5 +1,4 @@
 const tmdbKey = process.env.REACT_APP_TMDB_KEY
-console.log(tmdbKey);
 
 export const options = {
     method: 'GET',

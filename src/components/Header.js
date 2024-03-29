@@ -1,14 +1,17 @@
 import React from 'react'
 import movie_icon from './images/movie_icon.png'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { auth } from '../utils/firebase'
 import { signOut } from "firebase/auth";
 import { removeUser } from '../utils/userSlice'
+import { toggleMovieState } from '../utils/chatGptMovies'
 
 const Header = () => {
   
   const user = useSelector((store)=>store.user)
+
+  const movieState = useSelector((store)=>store.gptMovies?.movieState)
   
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -22,8 +25,12 @@ const Header = () => {
     });
   }
 
-  const moveToChatGptPage = () => {
-    navigate("/chatGpt")
+  const movetoChatgptPage = () => {
+      dispatch(toggleMovieState())
+  }
+
+  const moveToBrowsePage = () => {
+    dispatch(toggleMovieState())
   }
 
   return (
@@ -33,7 +40,13 @@ const Header = () => {
           <div>
               {
                 user && <>
-                <a href="#" className='text-white m-2 underline' onClick={moveToChatGptPage}>dont know what to watch use chatGpt</a>
+                {
+                  movieState ? 
+                  <Link to="/chatGpt" onClick={moveToBrowsePage} className='text-white m-2 underline'>dont know what to watch use chatGpt</Link>
+                  : 
+                  <Link to="/browse" onClick={movetoChatgptPage} className='text-white m-2 underline'>back to homePage</Link> 
+                  
+                }
                 <button onClick={handleSignOut} 
                   className='bg-red-700 px-3 text-xs py-2 outline-none rounded-lg lg:px-4 lg:py-2 lg:text-sm'                    
                   >
