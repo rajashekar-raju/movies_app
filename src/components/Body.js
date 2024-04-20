@@ -7,32 +7,34 @@ import { onAuthStateChanged } from 'firebase/auth'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { addUser, removeUser } from '../utils/userSlice'
+import BrowsePage from './BrowsePage'
 
 const Body = () => {
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const dispatch = useDispatch();
+  // const navigate = useNavigate();
 
-  useEffect(()=> {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) { 
-        const {uid,email,displayName} = user;
-        dispatch(addUser({uid:uid,email:email,displayName:displayName}));
-        navigate("/browse");
-      } else {
-        // User is signed out
-        dispatch(removeUser());
-        navigate("/");
-      }
-    });
-    return () => unsubscribe();
-  },[])
+  // useEffect(()=> {
+  //   const unsubscribe = onAuthStateChanged(auth, (user) => {
+  //     if (user) { 
+  //       const {uid,email,displayName} = user;
+  //       dispatch(addUser({uid:uid,email:email,displayName:displayName}));
+  //       navigate("/browse");
+  //     } else {
+  //       // User is signed out
+  //       dispatch(removeUser());
+  //       navigate("/");
+  //     }
+  //   });
+  //   return () => unsubscribe();
+  // },[])
 
   return (
     <div className='w-screen'>
         <img src={backgroundImage} alt="backgroundIMage" className='absolute -z-10 w-full h-full' />
         <Header/>
-        <LoginPage/>
+        {/* <LoginPage/> */}
+        <BrowsePage/>
     </div>
   )
 }

@@ -10,13 +10,13 @@ import MovieDetailsPage from "./components/MovieDetailsPage";
 function App() {
 
   const Router = createBrowserRouter([
+    // {
+    //   path:"/",
+    //   element:<Body/>
+    // },
     {
       path:"/",
       element:<Body/>
-    },
-    {
-      path:"/browse",
-      element:<BrowsePage/>
     },
     {
       path:"/chatGpt",
