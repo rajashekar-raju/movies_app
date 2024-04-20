@@ -15,4 +15,4 @@ const ChatGptPage = () => {
   )
 }
 
-export default ChatGptPage
+export default ChatGptPage 

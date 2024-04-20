@@ -21,7 +21,7 @@ const VideoTitle = ({title,overview}) => {
             </button>
         </div>
     </div>
-  )
+  ) 
 }
 
 export default VideoTitle 

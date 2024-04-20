@@ -18,7 +18,6 @@ const useNowPlayingMovies = () => {
         !now_playing_movies && nowPlayingMovies()
     },[])
 
-
 }
 
-export default useNowPlayingMovies
+export default useNowPlayingMovies 

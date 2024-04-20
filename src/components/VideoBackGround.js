@@ -7,8 +7,9 @@ const VideoBackGround = ({movieId}) => {
 
   const getTrailer = async() => {
 
-    const data = await fetch('https://api.themoviedb.org/3/movie/1011985/videos?language=en-US', options)
+    const data = await fetch('https://api.themoviedb.org/3/movie/'+movieId+'/videos?language=en-US', options)
     const jsonData = await data.json();
+    console.log(jsonData)
     const filterdData = jsonData.results.filter((video)=>video.type === "Trailer")
     const movieTrailer = filterdData ? filterdData[0] : jsonData.results[0]
     setTrailerKey(movieTrailer.key)
@@ -19,7 +20,7 @@ const VideoBackGround = ({movieId}) => {
   },[])
 
   return (
-    <div className=''>
+    <div>
 
       <iframe 
         className='w-screen aspect-video'

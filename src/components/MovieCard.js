@@ -11,6 +11,6 @@ const MovieCard = ({movieId,poster}) => {
       </Link>
     </div>
   )
-}
+} 
 
 export default MovieCard  

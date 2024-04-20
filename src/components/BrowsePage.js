@@ -12,13 +12,13 @@ const BrowsePage = () => {
   usePopularMovies()
   useTopRatedMovies()
   useUpComingMovies()
+  
   return (
     <div>
-      <Header/>
       <MainContainer/>
       <SecondaryContainer/>
     </div>
   )
 }
 
-export default BrowsePage;
+export default BrowsePage; 
