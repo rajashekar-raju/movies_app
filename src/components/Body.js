@@ -1,42 +1,20 @@
-import React, { useEffect } from 'react'
-import Header from './Header'
-import LoginPage from './LoginPage'
-import backgroundImage from './images/background.jpeg'
-import { auth } from '../utils/firebase'
-import { onAuthStateChanged } from 'firebase/auth'
-import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { addUser, removeUser } from '../utils/userSlice'
-import BrowsePage from './BrowsePage'
+import React from 'react';
+import Header from './Header';
+import BrowsePage from './BrowsePage';
+import backgroundImage from './images/background.jpeg';
 
 const Body = () => {
-
-  // const dispatch = useDispatch();
-  // const navigate = useNavigate();
-
-  // useEffect(()=> {
-  //   const unsubscribe = onAuthStateChanged(auth, (user) => {
-  //     if (user) { 
-  //       const {uid,email,displayName} = user;
-  //       dispatch(addUser({uid:uid,email:email,displayName:displayName}));
-  //       navigate("/browse");
-  //     } else {
-  //       // User is signed out
-  //       dispatch(removeUser());
-  //       navigate("/");
-  //     }
-  //   });
-  //   return () => unsubscribe();
-  // },[])
-
-  return (
-    <div className='w-screen'>
-        <img src={backgroundImage} alt="backgroundIMage" className='absolute -z-10 w-full h-full' />
-        <Header/>
-        {/* <LoginPage/> */}
-        <BrowsePage/>
-    </div>
-  )
-}
+    return (
+        <div className="w-screen relative">
+            <img src={backgroundImage} alt="backgroundIMage" className="absolute -z-10 w-full h-full" />
+            <Header />
+            <div className="mt-20">
+                {/* Adjust margin-top to the height of your header */}
+                <BrowsePage />
+            </div>
+        </div>
+    );
+};
 
 export default Body;
+ 

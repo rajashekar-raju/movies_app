@@ -12,7 +12,6 @@ const SecondaryContainer = () => {
   if(!popularMovies) return
   if(!topRatedMovies) return
   if(!upcomingMovies) return
-  // console.log(topRatedMovies); 
 
   return (
     <div className='bg-black'>
